@@ -1,0 +1,42 @@
+{
+    "explorer.confirmDelete": false,
+    "editor.formatOnType": true,
+    "docker.commands.attach": "${config:docker.dockerPath} exec -it ${containerId} bash",
+    "redhat.telemetry.enabled": true,
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh"
+        },
+        "fish": {
+            "path": "fish"
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        }
+    },
+    "editor.formatOnSave": true,
+    "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform",
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+    "source.formatAll.terraform": true
+        },
+    },
+    "[terraform-vars]": {   
+    "editor.defaultFormatter": "hashicorp.terraform",
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+    "source.formatAll.terraform": true
+        },
+    }
+    
+}
