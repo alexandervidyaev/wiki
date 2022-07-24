@@ -1,0 +1,1 @@
+Разворачивает nginx + mysql + wordpress
