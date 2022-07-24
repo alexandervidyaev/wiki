@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    ports: 
+      - "80:80"
+    volumes:
+      - ./www:/var/www/html
+    depends_on:
+      php:
+        condition: service_healthy
+    restart: always
+  php:
+    build: ./php
+    container_name: php
+    volumes:
+      - ./www:/var/www/html
+    healthcheck:
+      test: ["CMD", "php-fpm", "-t"]
+      interval: 3s
+      timeout: 5s
+      retries: 5
+      start_period: 1s
